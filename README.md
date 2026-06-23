@@ -2,7 +2,7 @@
 
 A terminal-style web application that visualizes cryptographic hash functions with a hacker aesthetic. Features Matrix rain background, CRT scanline effects, and real-time avalanche effect demonstration.
 
-🌐 **Live:** [hash-explorer.vercel.app](https://hash-explorer.vercel.app)
+🌐 **Live:** [hash-explorer.vercel.app](https://hash-explorer-six.vercel.app/)
 
 ## ✨ Features
 
