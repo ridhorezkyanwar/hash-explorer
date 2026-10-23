@@ -1,15 +1,11 @@
 # 🖥️ Cryptographic Hash Explorer
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=850&color=58A6FF&center=true&vCenter=true&width=520&lines=Build+%E2%80%A2+Test+%E2%80%A2+Improve" alt="Animated banner: Build, Test, Improve" />
-</p>
-<p align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js badge" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript badge" />
   <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS badge" />
   <img src="https://img.shields.io/badge/Web%20Crypto%20API-3C873A?style=flat-square" alt="Web Crypto API badge" />
 </p>
-
 
 A terminal-style web application that visualizes cryptographic hash functions with a hacker aesthetic. Features Matrix rain background, CRT scanline effects, and real-time avalanche effect demonstration.
 
