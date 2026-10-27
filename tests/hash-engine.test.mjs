@@ -37,6 +37,13 @@ test("Hamming distance counts changed bits, not changed characters", () => {
   assert.equal(calculateHammingDistance("10101010", "10101011"), 1);
 });
 
+test("invalid Hamming distance inputs are rejected", () => {
+  assert.throws(() => calculateHammingDistance("010", "01"), RangeError);
+  assert.throws(() => calculateHammingDistance("010x", "0100"), TypeError);
+  assert.throws(() => hexToBinary("0g"), TypeError);
+  assert.throws(() => hexToBinary(""), TypeError);
+});
+
 test("an avalanche comparison for distinct inputs uses the full digest width", async () => {
   const first = await computeHash("hello", "SHA-256");
   const second = await computeHash("hellO", "SHA-256");
