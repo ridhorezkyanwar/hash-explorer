@@ -26,7 +26,7 @@ A terminal-style web application that visualizes cryptographic hash functions wi
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | Next.js 15 (App Router) |
+| Framework | Next.js 16 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
 | Icons | Lucide React |
