@@ -42,6 +42,10 @@ One-way mathematical functions that map arbitrary-size data to fixed-size output
 ### Avalanche Effect
 A desirable property where a small change in input (even 1 bit) causes ~50% of output bits to change. This is critical for cryptographic security.
 
+### Safety note
+
+This is a learning/visualization tool, not a password-storage system. Do not store passwords as raw SHA hashes; production password storage requires a purpose-built password hashing scheme such as Argon2id, scrypt, or bcrypt with appropriate parameters. SHA-1 is included for comparison only and should not be selected for new security-sensitive designs.
+
 ### SHA Family
 - **SHA-1** (160 bits) - Deprecated, collision attacks found
 - **SHA-256** (256 bits) - Current standard for most applications
