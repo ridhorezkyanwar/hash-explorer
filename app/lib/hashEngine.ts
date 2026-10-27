@@ -33,18 +33,28 @@ export async function computeAllHashes(input: string): Promise<HashResult[]> {
 }
 
 // Hitung perbedaan bit antara 2 hash (untuk avalanche effect)
-export function calculateHammingDistance(hash1: string, hash2: string): number {
-  if (hash1.length !== hash2.length) return 0;
+export function calculateHammingDistance(bits1: string, bits2: string): number {
+  if (!/^[01]*$/.test(bits1) || !/^[01]*$/.test(bits2)) {
+    throw new TypeError("Hamming distance inputs must be binary strings.");
+  }
+  if (bits1.length !== bits2.length) {
+    throw new RangeError("Hamming distance inputs must have equal lengths.");
+  }
+
   let distance = 0;
-  for (let i = 0; i < hash1.length; i++) {
-    if (hash1[i] !== hash2[i]) distance++;
+  for (let i = 0; i < bits1.length; i++) {
+    if (bits1[i] !== bits2[i]) distance++;
   }
   return distance;
 }
 
-// Convert hex ke binary untuk visualisasi
+// Convert a valid hexadecimal digest to a contiguous binary string for visualization.
 export function hexToBinary(hex: string): string {
-  return hex.split("").map(c => 
-    parseInt(c, 16).toString(2).padStart(4, "0")
-  ).join("");
+  if (!/^[0-9a-f]+$/i.test(hex)) {
+    throw new TypeError("Input must be a non-empty hexadecimal string.");
+  }
+  return hex
+    .split("")
+    .map((character) => Number.parseInt(character, 16).toString(2).padStart(4, "0"))
+    .join("");
 }
